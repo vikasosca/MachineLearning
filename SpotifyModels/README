@@ -1,0 +1,67 @@
+🎵 Spotify Genre Classification using Machine Learning
+Can we predict the genre of a song just from its audio features?
+This project explores that question using a dataset of over 45,000 Spotify tracks with metadata and audio features.
+
+📁 Dataset
+Source: Kaggle / SpotifyFeatures.csv
+Each row includes:
+
+Audio features: danceability, energy, valence, tempo, etc.
+
+Metadata: track name, artist, genre, etc.
+
+🧪 Problem Statement
+Multi-class classification:
+Predict the genre of a track based on numerical audio features.
+
+⚙️ Workflow
+Data Cleaning & Preprocessing
+
+Handled inconsistent genre labels (’ vs ')
+
+Dropped nulls and limited to top 8 genres
+
+Feature Scaling
+
+Used StandardScaler for normalization
+
+Model Training
+
+Trained RandomForestClassifier on scaled features
+
+Evaluation
+
+Accuracy: 53%
+
+classification_report included for all genres
+
+📊 Results
+Genre	Precision	Recall	F1-Score
+Comedy	0.98	0.95	0.96
+Soundtrack	0.85	0.88	0.86
+Electronic	0.61	0.63	0.62
+Pop	0.44	0.52	0.47
+Indie	0.09	0.08	0.08
+
+🧠 Key Learnings
+Genre classification is harder than it sounds — especially with overlapping genre definitions.
+
+Reducing class imbalance and label noise led to a 2x jump in accuracy.
+
+Feature engineering is crucial; models are only as good as the data behind them.
+
+🚀 Next Steps
+Try XGBoost for better performance
+
+Add lyrics or metadata for richer predictions
+
+Deploy as a Streamlit/Flask app for genre prediction UI
+
+📦 Run the Project
+bash
+Copy
+Edit
+pip install pandas scikit-learn numpy matplotlib
+python genre_classifier.py
+📬 Let’s Connect
+Found this useful? Reach out on LinkedIn or leave a star 🌟 on this repo!
